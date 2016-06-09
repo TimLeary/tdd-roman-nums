@@ -4,6 +4,15 @@
     class RomanNum {
         protected $number;
         protected $romanNumber;
+        
+        public static $formats = [
+            50  => 'L',
+            10  => 'X',
+            9   => 'IX',
+            5   => 'V',
+            4   => 'IV',
+            1   => 'I'
+        ];
 
         public function __construct($number)
         {
@@ -12,42 +21,13 @@
 
         public function convert()
         {
-            while ($this->number >= 50)
-            {
-                $this->romanNumber .= 'L';
-                $this->number -= 50;
+            foreach (static::$formats as $limit => $format) {
+                while($this->number >= $limit) {
+                    $this->romanNumber .= $format;
+                    $this->number -= $limit;
+                }
             }
-            
-            while ($this->number >= 10)
-            {
-                $this->romanNumber .= 'X';
-                $this->number -= 10;
-            }
-            
-            while ($this->number >= 9)
-            {
-                $this->romanNumber .= 'IX';
-                $this->number -= 9;
-            }
-            
-            while ($this->number >= 5)
-            {
-                $this->romanNumber .= 'V';
-                $this->number -= 5;
-            }
-            
-            while ($this->number >= 4)
-            {
-                $this->romanNumber .= 'IV';
-                $this->number -= 4;
-            }
-            
-            while ($this->number >= 1)
-            {
-                $this->romanNumber .= 'I';
-                $this->number -= 1;
-            }
-            
+                         
             return $this->romanNumber;
         }
     }
