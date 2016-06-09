@@ -12,7 +12,7 @@
 
         public function convert()
         {
-            if($this->number >= 10)
+            while ($this->number >= 10)
             {
                 $this->romanNumber .= 'X';
                 $this->number -= 10;

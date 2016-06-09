@@ -57,4 +57,22 @@
             $romanNum = new RomanNum(10);
             $this->assertEquals('X', $romanNum->convert());
         }
+        
+        /**
+        * @test
+        */
+        public function eleven()
+        {
+            $romanNum = new RomanNum(11);
+            $this->assertEquals('XI', $romanNum->convert());
+        }
+                
+        /**
+        * @test
+        */
+        public function twenty()
+        {
+            $romanNum = new RomanNum(20);
+            $this->assertEquals('XX', $romanNum->convert());
+        }
     }
