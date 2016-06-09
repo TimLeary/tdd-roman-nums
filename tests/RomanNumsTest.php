@@ -18,7 +18,7 @@
         */
         public function two()
         {
-            $romanNum = new RomanNum(1);
+            $romanNum = new RomanNum(2);
             $this->assertEquals('II', $romanNum->convert());
         }
 
@@ -27,7 +27,7 @@
         */
         public function three()
         {
-            $romanNum = new RomanNum(1);
+            $romanNum = new RomanNum(3);
             $this->assertEquals('III', $romanNum->convert());
         }
     }

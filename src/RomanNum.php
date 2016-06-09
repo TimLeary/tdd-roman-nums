@@ -2,13 +2,15 @@
     namespace Src;
 
     class RomanNum {
-        public function __construct()
-        {
+        protected $number;
 
+        public function __construct($number)
+        {
+            $this->number = $number;
         }
 
         public function convert()
         {
-            return 'I';
+            return str_repeat('I', $this->number);
         }
     }
