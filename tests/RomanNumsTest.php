@@ -129,4 +129,13 @@
             $romanNum = new RomanNum(1000);
             $this->assertEquals('M', $romanNum->convert());
         }
+        
+        /**
+        * @test
+        */
+        public function thousand_nine_hundred_and_ninety_nine()
+        {
+            $romanNum = new RomanNum(1999);
+            $this->assertEquals('MCMXCIX', $romanNum->convert());
+        }
     }
