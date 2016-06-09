@@ -12,4 +12,22 @@
             $romanNum = new RomanNum(1);
             $this->assertEquals('I', $romanNum->convert());
         }
+
+        /**
+        * @test
+        */
+        public function two()
+        {
+            $romanNum = new RomanNum(1);
+            $this->assertEquals('II', $romanNum->convert());
+        }
+
+                /**
+        * @test
+        */
+        public function three()
+        {
+            $romanNum = new RomanNum(1);
+            $this->assertEquals('III', $romanNum->convert());
+        }
     }
