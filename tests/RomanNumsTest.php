@@ -48,4 +48,13 @@
             $romanNum = new RomanNum(6);
             $this->assertEquals('VI', $romanNum->convert());
         }
+        
+        /**
+        * @test
+        */
+        public function ten()
+        {
+            $romanNum = new RomanNum(10);
+            $this->assertEquals('X', $romanNum->convert());
+        }
     }

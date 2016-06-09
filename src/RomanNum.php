@@ -12,6 +12,12 @@
 
         public function convert()
         {
+            if($this->number >= 10)
+            {
+                $this->romanNumber .= 'X';
+                $this->number -= 10;
+            }
+            
             if($this->number >= 5)
             {
                 $this->romanNumber .= 'V';
