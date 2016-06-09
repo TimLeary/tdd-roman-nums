@@ -12,6 +12,12 @@
 
         public function convert()
         {
+            while ($this->number >= 50)
+            {
+                $this->romanNumber .= 'L';
+                $this->number -= 50;
+            }
+            
             while ($this->number >= 10)
             {
                 $this->romanNumber .= 'X';

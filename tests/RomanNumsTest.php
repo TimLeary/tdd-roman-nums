@@ -75,4 +75,13 @@
             $romanNum = new RomanNum(20);
             $this->assertEquals('XX', $romanNum->convert());
         }
+        
+        /**
+        * @test
+        */
+        public function fifty()
+        {
+            $romanNum = new RomanNum(50);
+            $this->assertEquals('L', $romanNum->convert());
+        }
     }
