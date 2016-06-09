@@ -138,4 +138,13 @@
             $romanNum = new RomanNum(1999);
             $this->assertEquals('MCMXCIX', $romanNum->convert());
         }
+        
+        /**
+        * @test
+        */
+        public function four_hundred_and_fourty_four()
+        {
+            $romanNum = new RomanNum(1999);
+            $this->assertEquals('MCMXCIX', $romanNum->convert());
+        }
     }
