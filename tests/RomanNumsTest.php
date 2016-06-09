@@ -102,4 +102,31 @@
             $romanNum = new RomanNum(9);
             $this->assertEquals('IX', $romanNum->convert());
         }
+        
+        /**
+        * @test
+        */
+        public function hundred()
+        {
+            $romanNum = new RomanNum(100);
+            $this->assertEquals('C', $romanNum->convert());
+        }
+        
+        /**
+        * @test
+        */
+        public function five_hundred()
+        {
+            $romanNum = new RomanNum(500);
+            $this->assertEquals('D', $romanNum->convert());
+        }
+        
+        /**
+        * @test
+        */
+        public function thousand()
+        {
+            $romanNum = new RomanNum(1000);
+            $this->assertEquals('M', $romanNum->convert());
+        }
     }
