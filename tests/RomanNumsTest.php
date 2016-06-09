@@ -84,4 +84,22 @@
             $romanNum = new RomanNum(50);
             $this->assertEquals('L', $romanNum->convert());
         }
+        
+        /**
+        * @test
+        */
+        public function four()
+        {
+            $romanNum = new RomanNum(4);
+            $this->assertEquals('IV', $romanNum->convert());
+        }
+        
+        /**
+        * @test
+        */
+        public function nine()
+        {
+            $romanNum = new RomanNum(9);
+            $this->assertEquals('IX', $romanNum->convert());
+        }
     }

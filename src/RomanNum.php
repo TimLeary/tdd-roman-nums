@@ -24,10 +24,22 @@
                 $this->number -= 10;
             }
             
+            if($this->number >= 9)
+            {
+                $this->romanNumber .= 'IX';
+                $this->number -= 9;
+            }
+            
             if($this->number >= 5)
             {
                 $this->romanNumber .= 'V';
                 $this->number -= 5;
+            }
+            
+            if($this->number >= 4)
+            {
+                $this->romanNumber .= 'IV';
+                $this->number -= 4;
             }
             
             $this->romanNumber .= str_repeat('I', $this->number);
