@@ -24,25 +24,29 @@
                 $this->number -= 10;
             }
             
-            if($this->number >= 9)
+            while ($this->number >= 9)
             {
                 $this->romanNumber .= 'IX';
                 $this->number -= 9;
             }
             
-            if($this->number >= 5)
+            while ($this->number >= 5)
             {
                 $this->romanNumber .= 'V';
                 $this->number -= 5;
             }
             
-            if($this->number >= 4)
+            while ($this->number >= 4)
             {
                 $this->romanNumber .= 'IV';
                 $this->number -= 4;
             }
             
-            $this->romanNumber .= str_repeat('I', $this->number);
+            while ($this->number >= 1)
+            {
+                $this->romanNumber .= 'I';
+                $this->number -= 1;
+            }
             
             return $this->romanNumber;
         }
