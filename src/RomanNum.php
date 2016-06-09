@@ -3,6 +3,7 @@
 
     class RomanNum {
         protected $number;
+        protected $romanNumber;
 
         public function __construct($number)
         {
@@ -11,11 +12,14 @@
 
         public function convert()
         {
-            if($this->number == 5)
+            if($this->number >= 5)
             {
-                return 'V';
+                $this->romanNumber .= 'V';
+                $this->number -= 5;
             }
             
-            return str_repeat('I', $this->number);
+            $this->romanNumber .= str_repeat('I', $this->number);
+            
+            return $this->romanNumber;
         }
     }

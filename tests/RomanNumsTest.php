@@ -39,4 +39,13 @@
             $romanNum = new RomanNum(5);
             $this->assertEquals('V', $romanNum->convert());
         }
+        
+        /**
+        * @test
+        */
+        public function six()
+        {
+            $romanNum = new RomanNum(6);
+            $this->assertEquals('VI', $romanNum->convert());
+        }
     }
