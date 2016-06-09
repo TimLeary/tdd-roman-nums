@@ -9,6 +9,6 @@
 
         public function convert()
         {
-            
+            return 'I';
         }
     }
