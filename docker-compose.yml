@@ -1,0 +1,15 @@
+version: "3.1"
+services:
+    composer:
+      image: composer
+      container_name: composer
+      volumes:
+        - ".:/app"
+      command: install
+
+    php:
+      image: php:7.1-fpm-alpine
+      ports:
+        - "9000:9000"
+      volumes:
+        - ".:/var/www/html/app"
